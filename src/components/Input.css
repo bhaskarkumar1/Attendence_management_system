@@ -1,0 +1,15 @@
+.label{
+    padding: 3% 0.5% 3% 3%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.add{
+    margin-left: 3%;
+    width: 8%;
+}
+
+.input{
+    border: 2px solid rgb(98, 228, 130);
+    border-radius: 6%;
+}
