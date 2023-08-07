@@ -2,9 +2,10 @@ import "./Output.css";
 const Output=(props)=>{
     const deleteFunction=(index)=>{
         console.log("delete clicked"+index);
-        delete props.array[index];
+        props.onDelete(index);
     }
     return(
+        <div className="container">
         <table class="table table-light table-hover" >
             <thead >
             <tr>
@@ -25,11 +26,12 @@ const Output=(props)=>{
                 <td>{value.roll}</td>
                 <td>{value.checkin}</td>
                 <td>{value.checkout}</td>
-                <td><img onClick={() => deleteFunction(index)} src="./delete.png" alt="delete" width="20px" height="20px"/></td>
+                <td><img onClick={() => deleteFunction(index)} src="./delete.png" alt="delete" width="20px" height="20px" style={{ cursor: "pointer" }}/></td>
             </tr>
             </tbody>
                 )} )}
         </table>
+        </div>
     )
 }
 

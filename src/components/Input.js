@@ -46,6 +46,15 @@ const Input=(props)=>{
 
   const t=data.filter((value)=>value.name.toLowerCase()===props.search.toLowerCase())
 
+  //handle delete 
+  const handleDelete=(index)=>{
+      const updatedArray=[];
+      for(let i=0;i<data.length;i++){
+        if(i!==index) updatedArray.push(data[i]);
+      }
+
+      setdata(updatedArray);
+  }
     return(
         <>
         <div>
@@ -63,7 +72,7 @@ const Input=(props)=>{
 
 
         </div>
-        <Output array={data} searchArr={t}  />
+        <Output array={data} searchArr={t} onDelete={handleDelete}  />
         </>
     )
 }
