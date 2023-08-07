@@ -57,8 +57,8 @@ const Input=(props)=>{
   }
     return(
         <>
-        <div>
-            <label className="label"  for="name">Name</label>
+        <div className="container">
+            <label className="first"  for="name">Name</label>
             <input className="input" required onChange={(event)=>{setName(event.target.value)}} value={name} type="text" name="Name"></input>
             <label className="label"  for="rollnumber">Roll No.</label>
             <input className="input" required onChange={(event)=>{setRoll(event.target.value)}} value={roll} type="text" name="RollNo"></input>
@@ -66,8 +66,9 @@ const Input=(props)=>{
             <input className="input" required onChange={(event)=>{setCheckin(event.target.value)}} value={checkin} type="time"></input>
             <label className="label"  for="checkoutTime">Check-out Time: </label>
             <input className="input" required onChange={(event)=>{setCheckout(event.target.value)}} value={checkout}  type="time"></input>
-            <button type="submit" class="btn add btn-success" onClick={add} >Add Details</button>
-            <button type="submit" class="btn add btn-danger" onClick={reset}>Reset</button>
+            
+            <button type="submit" class="btn add btn-success" onClick={add} >Add +</button>
+            <button type="submit" class="btn add btn-danger" onClick={reset}>Reset -</button>
 
 
 

@@ -15,7 +15,7 @@ const Navbar=(props)=>{
 
     return (
       <>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className='navbar navbar-expand-lg bg-body-tertiary'>
   <div className="container-fluid">
     {/* <a className="navbar-brand" href="/#">Navbar</a>  */}
     <a class="navbar-brand" href="/#">
@@ -36,10 +36,12 @@ const Navbar=(props)=>{
           <a className="nav-link active" aria-current="page" href="/#">About</a>
         </li>
       </ul>
+     
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search Student" aria-label="Search" value={search} onChange={(event)=>{setSearch(event.target.value)}}/>
         <button className="btn btn-outline-success" onClick={handleSearch} type="submit">Search</button>
       </form>
+      
     </div>
   </div>
 </nav>
