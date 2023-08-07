@@ -16,8 +16,9 @@ const Input=(props)=>{
     }
     const[data, setdata]=useState(JSON.parse(localStorage.getItem("dataKey")) || []);
     const add=()=>{
+      if(newData.name!=="" && newData.roll!=="" && newData.checkin!=="" && newData.checkout!=="" ){
         setdata((prevdata)=>[...prevdata,newData]);
-        
+    
       console.log(data);
 
         
@@ -26,6 +27,7 @@ const Input=(props)=>{
     setRoll("");
     setCheckin("");
     setCheckout("");
+  }
     }
     console.log(data);
     //reset
